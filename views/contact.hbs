@@ -1,0 +1,75 @@
+{{>header}}
+<title>Interio | Contact US</title>
+{{>navbar}}
+<div class="container-fluid my-2">
+    <h5 class="text-center">Contact Us</h5>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="background mb-1 p-2 text-center">Phone 6386489936</div>
+            <div class="background mb-1 p-2 text-center">Email chandan662018@gmail.com</div>
+            <div class="background mb-1 p-2 text-center">A-43, Sector 16, Noida 201301, UP</div>
+            <div class="mapouter">
+                <div class="gmap_canvas"><iframe width="600" height="500" required id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=a-43%20sector%2016%20noida&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a
+                        href="https://123movies-to.org"></a><br>
+                    <style>
+                        .mapouter {
+                            position: relative;
+                            text-align: right;
+                            height: 350px;
+                            width: 100%;
+                        }
+                    </style>
+                    <style>
+                        .gmap_canvas {
+                            overflow: hidden;
+                            background: none !important;
+                            height: 350px;
+                            width: 100%;
+                        }
+                    </style>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            {{#if show }}
+            <div class="alert alert-success text-center alert-dismissible fade show" role="alert">
+                Thanks to Share Your Query With US!!!! Our Team Will Contact You Soon!!!
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/if}}
+            <form action="/contact" method="post">
+                <div class="mb-3">
+                    {{!-- <label for="name" class="form-label">Name</label> --}}
+                    <input type="text" name="name" required id="name" placeholder="Enter Name" class="form-control">
+                </div>
+                <div class="mb-3">
+                    {{!-- <label for="email" class="form-label">Email Address</label> --}}
+                    <input type="email" name="email" required id="email" placeholder="Enter Email Address"
+                        class="form-control">
+                </div>
+                <div class="mb-3">
+                    {{!-- <label for="phone" class="form-label">Phone</label> --}}
+                    <input type="text" name="phone" required id="phone" placeholder="Enter Phone Number"
+                        class="form-control">
+                </div>
+                <div class="mb-3">
+                    {{!-- <label for="subject" class="form-label">Subject</label> --}}
+                    <input type="text" name="subject" required id="subject" placeholder="Enter Subject"
+                        class="form-control">
+                </div>
+                <div class="mb-3">
+                    {{!-- <label for="message" class="form-label">Message</label> --}}
+                    <textarea name="message" required id="message" rows="8" placeholder="Enter Message"
+                        class="form-control"></textarea>
+                </div>
+                <div class="mb-3 d-flex">
+                    <button type="reset" class="m-1 btn bg-danger text-light w-50">Reset</button>
+                    <button type="Submit" class="m-1 btn background mybtn text-light w-50">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{{>footer}}
